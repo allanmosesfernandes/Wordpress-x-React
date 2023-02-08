@@ -11,6 +11,9 @@ const Header = () => {
             <h2>Allan Fernandes</h2>
             <span>{`{}`}</span>
         </Link>
+        <div className="nav-right">
+            <Link to="/">Blog</Link>
+        </div>
     </nav>
     <Outlet />
     </>

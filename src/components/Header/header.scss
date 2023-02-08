@@ -1,5 +1,12 @@
 nav {
     padding: 3rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+
+    .nav-right {
+        margin-left: auto;
+    }
 }
 
 .logo {

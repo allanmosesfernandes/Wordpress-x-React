@@ -1,7 +1,9 @@
 import './App.css';
 import axios from "axios";
-import Header from './components/Header/header';
 import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header/header';
+import FirstFold from './components/FirstFold/firstFold';
+import BlogPreview from './components/BlogPreview/BlogPreview';
 
 /* https://public-api.wordpress.com/rest/v1.1/sites/$site/posts/$post_ID
 http://allanmoses.ninja/?p=5 */
@@ -24,10 +26,13 @@ const App = () => {
 
 
   return (
-   <Routes>
-    <Route path='/' element={<Header />}>
-    </Route>
-   </Routes>
+    <Routes>
+      <Route path='/' element={<Header />}>
+        <Route index element={<FirstFold />} />
+      </Route>
+      <Route path='/' element={<BlogPreview />} />
+    </Routes>
+
 
   );
 }
