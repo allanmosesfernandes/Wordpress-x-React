@@ -37,7 +37,9 @@ const BlogPreview = () => {
                 <div className="card__content">
                     <h4>{post.title.rendered}</h4>
                     <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
-
+                </div>
+                <div className="card__button">
+                    <button class="button-30">Read More</button>
                 </div>
             </div>
          )
