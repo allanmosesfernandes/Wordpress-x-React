@@ -19,15 +19,20 @@ const BlogPreview = () => {
 
 
   return (
-    <div className="blog__preview__container">
+    <div className="blog__preview__container ">
     {posts.map((post,index) => {
          const imageURL = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
-         console.log(imageURL);
+ 
          return (
-            <div className="blog__preview__card">
+            <div className="blog__preview__card" key={index}>
                 <div className="card__number">0{index + 1}</div>
                 <div className="card__image">
-                    <img src={imageURL} alt={`Image of post ${index + 1}`} />
+                    <img src={imageURL} alt={`post ${index + 1}`} />
+                </div>
+                <div className="card__content">
+                    <h4>{post.title.rendered}</h4>
+          <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
+
                 </div>
             </div>
          )
