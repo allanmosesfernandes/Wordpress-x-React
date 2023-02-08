@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <>
     <nav>
-        <Link to="/">
+        <Link to="/" className="logo">
             <h2>Allan Fernandes</h2>
-            <span>`{}`</span>
+            <span>{`{}`}</span>
         </Link>
     </nav>
     <Outlet />

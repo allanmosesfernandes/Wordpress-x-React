@@ -1,0 +1,18 @@
+nav {
+    padding: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    h2 {
+        font-size: 3rem;
+    }
+    span {
+        color: var(--yello);
+        font-size: 3rem;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+}

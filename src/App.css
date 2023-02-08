@@ -1,7 +1,12 @@
 :root {
   --body-color: #fb584a;
+  --yello: #FFD341;
   --base-font-color: #fff;
 }
+html {
+  font-size: 62.5%;
+}
+
 
 * {
   box-sizing: border-box;
