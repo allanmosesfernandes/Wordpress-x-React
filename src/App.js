@@ -30,7 +30,6 @@ const App = () => {
       <Route path='/' element={<Header />}>
         <Route index element={<FirstFold />} />
       </Route>
-      <Route path='/' element={<BlogPreview />} />
     </Routes>
 
 
