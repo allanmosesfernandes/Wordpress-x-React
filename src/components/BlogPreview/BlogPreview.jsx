@@ -21,17 +21,22 @@ const BlogPreview = () => {
   return (
     <div className="blog__preview__container ">
     {posts.map((post,index) => {
-         const imageURL = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
- 
+        const imageURL = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
+        //==Get the date from API and extract what you need==//
+        const dateString = post.date.split("T")[0];
+        console.log(dateString);
+        let blogDate = new Date(`${dateString}`).toDateString();
+        // const year = dateString.split("-")[0];
          return (
             <div className="blog__preview__card" key={index}>
                 <div className="card__number">0{index + 1}</div>
+                <span className="card__date">{blogDate}</span>
                 <div className="card__image">
                     <img src={imageURL} alt={`post ${index + 1}`} />
                 </div>
                 <div className="card__content">
                     <h4>{post.title.rendered}</h4>
-          <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
+                    <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
 
                 </div>
             </div>
