@@ -1,8 +1,13 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import "./blogPreview.scss";
+import { useNavigate } from "react-router-dom";
+
 
 const BlogPreview = () => {
+    
+    const navigate = useNavigate();
+
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -37,7 +42,7 @@ const BlogPreview = () => {
                     <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
                 </div>
                 <div className="card__button">
-                    <button class="button-30">Read More</button>
+                    <button className="button-30" onClick={() => navigate(`/blog/${post.slug}`)}>Read More</button>
                 </div>
             </div>
          )
